@@ -1,0 +1,77 @@
+/* El texto de contenido donde flota el video */
+.txt_contenido{
+  text-align: justify;
+}
+
+/* Efectos que damos al mandar a flotar el video */
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* El texto de contenido donde flota el video */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Contenedor principal del video */
+.contenedor_video {
+  padding: 45px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* El subcontenedor con la clase .video con el elemento HTML video */
+.video video {
+  max-width: 100%;
+  max-height: 100%;
+  width: 750px;
+  height: 450px;
+  background-color: #e6e5e6;  
+}
+
+/* Contenedor del video flotante o sticky */
+.videoflotante {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 345px;
+  height: 200px;
+  -webkit-animation: fade-in-up .25s ease forwards;
+          animation: fade-in-up .25s ease forwards;
+  border: 5px solid #888d92;
+}
+
+/* Cuando cerramos el video flotante, volvemos su posición al estado inicial */
+.videoflotante2 {
+  position: initial;
+}
+
+/* Botón cerrar el video flotante */
+.btn_cerrar{
+  font-size: 30px;
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 320px;
+  cursor: pointer;
+}
+
+/* Oculta el botón para cerrar el video flotante */
+.btn_cerrar_cls{
+  display: none;
+}
